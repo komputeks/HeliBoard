@@ -28,7 +28,8 @@ class AiRouter(private val config: Config) {
 
     private fun run(system: String, user: String, stream: Boolean = false): String {
         if (config.baseUrl.isBlank() || config.model.isBlank()) return ""
-        val conn = (URL(config.baseUrl.trimEnd('/') + "/v1/chat/completions").openConnection() as HttpURLConnection).apply {
+        val conn = (URL(config.baseUrl.trimEnd('/') + "/v1/chat/completions")
+            .openConnection() as HttpURLConnection).apply {
             requestMethod = "POST"
             setRequestProperty("Content-Type", "application/json")
             if (config.apiKey.isNotBlank()) setRequestProperty("Authorization", "Bearer ${config.apiKey}")
@@ -36,15 +37,13 @@ class AiRouter(private val config: Config) {
             readTimeout = config.timeoutMs.toInt()
             doOutput = true
         }
-        val body = """{"model":"${config.model}","stream":${stream},"messages":[
+        val body = """{"model":"${config.model}","stream":$stream,"messages":[
             {"role":"system","content":${json(system)}},
             {"role":"user","content":${json(user)}}
         ]}"""
         conn.outputStream.use { it.write(body.toByteArray()) }
-        if (conn.responseCode!hin 200..299) return ""
-        val raw = conn.inputStream.bufferyÔ^i×«
-
-treadText()
+        if (conn.responseCode !in 200..299) return ""
+        val raw = conn.inputStream.bufferedReader().readText()
         val idx = raw.indexOf("\"content\":\"")
         if (idx < 0) return ""
         val start = idx + "\"content\":\"".length
