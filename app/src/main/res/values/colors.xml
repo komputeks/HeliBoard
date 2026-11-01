@@ -12,9 +12,10 @@
     <color name="key_background_normal_lxx_light_border">#FFFFFF</color>
     <color name="key_background_functional_lxx_light_border">#CCCED5</color>
 
-    <color name="highlight_color_lxx_dark">#5E97F6</color>
-    <color name="gesture_trail_color_lxx_dark">#5E97F6</color>
-    <color name="gesture_trail_color_lxx_light">#1A73E8</color>
+    <!-- Premium palette: violet accent + deep slate surfaces -->
+    <color name="highlight_color_lxx_dark">#BB86FC</color>
+    <color name="gesture_trail_color_lxx_dark">#BB86FC</color>
+    <color name="gesture_trail_color_lxx_light">#7C4DFF</color>
     <color name="key_text_inactive_color_lxx_light">#B337474F</color>
     <color name="highlight_color_holo_white">#FFF0F0F0</color>
     <color name="key_text_inactivated_color_holo">#66E0E4E5</color>
@@ -32,9 +33,9 @@
     <color name="key_hint_letter_color_lxx_dark">#80FFFFFF</color>
 
     <!-- Color resources for the old LXX_Dark_Border theme, now for THEME_DARKER. -->
-    <color name="keyboard_background_lxx_dark_border">#0d0d0d</color>
-    <color name="key_background_normal_lxx_dark_border">#4d4d4d</color>
-    <color name="key_background_functional_lxx_dark_border">#1f1f1f</color>
+    <color name="keyboard_background_lxx_dark_border">#121218</color>
+    <color name="key_background_normal_lxx_dark_border">#1E1E28</color>
+    <color name="key_background_functional_lxx_dark_border">#16161E</color>
     <!-- Color resources for the old LXX_Dark_Amoled theme, now for THEME_BLACK. -->
     <color name="background_amoled_black">#000000</color>
     <color name="background_amoled_dark">#1A1A1A</color>
@@ -55,8 +56,8 @@
     <color name="accent">@color/highlight_color_lxx_light</color>
     <color name="setup_background">#FFFAFAFA</color>
     <color name="setup_step_background">#FFD1E3FA</color>
-    <color name="setup_text_title">#FF1767CF</color>
-    <color name="setup_text_action">#FF1767CF</color>
+    <color name="setup_text_title">#FF7C4DFF</color>
+    <color name="setup_text_action">#FF7C4DFF</color>
     <color name="action_bar_color">#FFF5F5F5</color>
     <color name="navigation_bar_color">#B3888888</color>
 
@@ -64,12 +65,12 @@
     <color name="foreground">#000</color>
     <color name="foreground_weak">#555</color>
     <color name="toast_background">#666666</color>
-    <color name="highlight_color_lxx_light">#1A73E8</color> <!-- todo: remove / replace with accent? -->
+    <color name="highlight_color_lxx_light">#7C4DFF</color>
     <color name="keyboard_background">@color/keyboard_background_light</color>
 
     <!-- Actually used keyboard default background colors -->
     <color name="keyboard_background_light">@color/keyboard_background_lxx_light_border</color>
-    <color name="keyboard_background_dark">#263238</color>
+    <color name="keyboard_background_dark">#121218</color>
 
     <!-- Scrollbar color -->
     <color name="toolbar_scrollbar">#66808080</color>
